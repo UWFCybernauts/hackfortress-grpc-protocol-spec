@@ -4,6 +4,7 @@ package exchange;
 
 service Exchange {
     rpc GetData(DataRequest) returns (DataResponse) {}
+    rpc GRPCHello(HelloRequest) returns (HelloResponse) {}
 }
 
 message DataResponse {
@@ -12,5 +13,13 @@ message DataResponse {
 
 message DataRequest {
     string request = 1;
+}
+
+message HelloRequest {
+    string hello = 1;
+}
+
+message HelloResponse {
+    string hello = 1;
 }
 
